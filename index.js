@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 
 import authRoute from './routes/auth.routes.js'
 import   userRoute from './routes/user.routes.js'
+import   postRoute from './routes/post.routes.js'
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use('/api/v1/auth',authRoute)
 app.use('/api/v1/users',userRoute)
+app.use('/api/v1/post',postRoute)
 
 app.listen(PORT,()=>{
     console.log(`server is listning at ${PORT}`);

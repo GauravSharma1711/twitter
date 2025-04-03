@@ -57,6 +57,13 @@ link:{
     type:String,
     dfault:"",
 },
+likedPosts:[
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Post",
+        default:[]
+    }
+],
 isEmailVerified:{
     type:Boolean,
     required:true
